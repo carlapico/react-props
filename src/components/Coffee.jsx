@@ -7,7 +7,7 @@ function Coffee(){
         fetch(`https://api.sampleapis.com/coffee/${temperature}`)
             .then(results => results.json()) //grab me the json body and returns it as a second promise
             .then(data => setCoffeeList(data)) //for now we are only console.loging the data
-            .catch(err => alert(err))
+            .catch(err => alert(err)) //handling our errors 
         // `https://api.sampleapis.com/coffee/${temperature}`
         //take the results and dump to setCoffee List (result -> setCoffeeList)
     }
