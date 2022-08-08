@@ -5,16 +5,16 @@ function Coffee(){
     const getCoffee = (temperature) => {
         //fetch coffee API 
         fetch(`https://api.sampleapis.com/coffee/${temperature}`)
-            .then(result => result.json()) //grab me the json body and returns it as a second promise
-            .then(data => console.log(data)) //for now we are only console.loging the data
+            .then(results => results.json()) //grab me the json body and returns it as a second promise
+            .then(data => setCoffeeList(data)) //for now we are only console.loging the data
             .catch(err => alert(err))
         // `https://api.sampleapis.com/coffee/${temperature}`
         //take the results and dump to setCoffee List (result -> setCoffeeList)
     }
     return (
         <>
-            <button onClick={getCoffee('hot')}>HOT</button>
-            <button onClick={getCoffee('iced')}>ICED</button>
+            <button onClick={() => getCoffee('hot')}>HOT</button>
+            <button onClick={() => getCoffee('iced')}>ICED</button>
             <section>
                 <h2>Coffee List</h2>
                 {!coffeeList
