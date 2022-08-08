@@ -6,6 +6,7 @@ import './App.css';
 
 function App() {
   const [name,setName] = useState('Mason')
+  
   return (
     <>
       <Menubar name={name} setName={setName}/>

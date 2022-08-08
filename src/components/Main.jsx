@@ -20,12 +20,14 @@ const student =  {
 
 //same as 
 
+
 function Main({name}){
     return (
         <main>
-            <h1> Hello {name}</h1>
-            <StudentCard student = {student} />
+            <h1> Hello {name || "Guest"}</h1> {/* // if we have a value for name it uses it, if not, it uses guest */}
+            {name && <StudentCard student = {student} />} {/*if there is a name then it will show the student card if not it won't*/}
         </main>
     )
 }
+
 export default Main;
