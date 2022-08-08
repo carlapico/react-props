@@ -14,17 +14,18 @@ function Coffee(){
 
         //using async/await instead of .then .catch 
         const getCoffeeSync = async (temperature) =>  {
-        try { //fetch APIs + .then results
-            const results = await fetch(`https://api.sampleapis.com/coffee/${temperature}`);
+        try { // we have to wrap it in try when we are trying to catch our errors
+            //fetch APIs + .then results
+                const results = await fetch(`https://api.sampleapis.com/coffee/${temperature}`);
             //grab tge json body + .then data 
-            const data = await results.json()
+                const data = await results.json()
             //setCoffeeList -> data
-            setCoffeeList(data)
+                setCoffeeList(data)
         }
             //if we want to catch errors
-            catch (err) {
-                alert (err)
-            }
+                catch (err) {
+                    alert (err)
+                }
         }
 
     return (
