@@ -1,9 +1,10 @@
 import React from 'react';
 
-function Menubar () {
+function Menubar() {
     return  (
-        <nav>
-            Menubar
+        <nav style={{display:'flex',justifyContent:'space-between'}}>
+            <span>Menubar</span>
+            <button>Logout</button>
         </nav>
     )
 }
