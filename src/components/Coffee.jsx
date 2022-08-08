@@ -9,12 +9,28 @@ function Coffee(){
             .then(data => setCoffeeList(data)) //for now we are only console.loging the data
             .catch(err => alert(err)) //handling our errors 
         // `https://api.sampleapis.com/coffee/${temperature}`
-        //take the results and dump to setCoffee List (result -> setCoffeeList)
+        //take the results and dump to setCoffeeList (result -> setCoffeeList)
     }
+
+        //using async/await instead of .then .catch 
+        const getCoffeeSync = async (temperature) =>  {
+        try { //fetch APIs + .then results
+            const results = await fetch(`https://api.sampleapis.com/coffee/${temperature}`);
+            //grab tge json body + .then data 
+            const data = await results.json()
+            //setCoffeeList -> data
+            setCoffeeList(data)
+        }
+            //if we want to catch errors
+            catch (err) {
+                alert (err)
+            }
+        }
+
     return (
         <>
-            <button onClick={() => getCoffee('hot')}>HOT</button>
-            <button onClick={() => getCoffee('iced')}>ICED</button>
+            <button onClick={() => getCoffeeSync('hot')}>HOT</button>
+            <button onClick={() => getCoffeeSync('iced')}>ICED</button>
             <section>
                 <h2>Coffee List</h2>
                 {!coffeeList
