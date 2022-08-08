@@ -3,7 +3,7 @@ import React from 'react';
 function Menubar () {
     return  (
         <nav>
-            Main
+            Menubar
         </nav>
     )
 }
