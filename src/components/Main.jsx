@@ -12,7 +12,7 @@ import React from 'react'
 
 //same as 
 
-function Main({name, total, isAmazing, fruit}){
+function Main({name}){
     return (
         <main>
             <h1> Hello {name}</h1>

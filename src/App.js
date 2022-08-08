@@ -11,9 +11,7 @@ function App() {
       <Menubar />
       <Main 
       name={name}
-      fruit='Banana' 
-      total={23} 
-      isAmazing='true'/>
+      />
       <Footer />
     </>
   );
