@@ -9,6 +9,7 @@ function Menubar({name,setName}) {
             ? <button onClick={() => {setName(null)}}>Logout</button>
             : <button onClick={() => {setName('Mason')}}>Login</button>
             }
+            
         </nav>
     )
 }

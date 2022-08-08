@@ -1,13 +1,6 @@
 import React from 'react'
 
-const student =  {
-    name: 'Khali Gopaul',
-    age: 37,
-    id: 'r64j83',
-    term: 'Su22'
-}
-
-function StudentCard ({student}) {
+function StudentCard ({name, student}) {
     return (
         <section>
             <h2>{student.name}</h2>
