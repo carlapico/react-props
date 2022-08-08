@@ -9,9 +9,10 @@ function App() {
   return (
     <>
       <Menubar />
-      <Main 
-      name={name}
-      />
+      <Main name={name}/>
+      <Main name="Mateo"/>
+      <Main name="Pam"/>
+      <Main name="Derek"/>
       <Footer />
     </>
   );
